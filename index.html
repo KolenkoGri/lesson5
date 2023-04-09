@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Формы5</title>
+    <style>
+      input,
+      textarea,
+      label {
+        display: block;
+      }
+      #discont_checkbox,#discont_text {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      action="https://jsonplaceholder.typicode.com/posts"
+      id="my-form"
+      method="post"
+    >
+      <fieldset>
+        <h1>Добавить товар</h1>
+        <fieldset>
+          <label>
+            Наименование
+            <input type="text" name="name" required />
+          </label>
+
+          <label>
+            Категория
+            <input type="text" name="category" required />
+          </label>
+          <label>
+            Единицы измерения
+            <input type="text" name="units" required />
+          </label>
+
+          <label for="discont"> Дисконт 
+            <input type="checkbox" id="discont_checkbox" value="discont" />
+            <input type="text" id="discont_text" disabled size="8px" />
+          </label>
+          
+
+          <label>
+            Описание
+            <textarea
+              name="description"
+              cols="20"
+              rows="10"
+              required
+            ></textarea>
+          </label>
+
+          <label>
+            Количество
+            <input type="text" name="count" required />
+          </label>
+
+          <label>
+            Цена
+            <input type="" name="price" required />
+          </label>
+          <br />
+          <label>
+            <input
+              type="file"
+              name="file"
+              placeholder="Выберите файл"
+              required
+            />
+          </label>
+        </fieldset>
+        <br />
+        <button type="submit" formtarget="_blank">Добавить товар</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
